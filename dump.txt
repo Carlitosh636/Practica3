@@ -1,0 +1,7 @@
+<div class="navMenu">
+                <ul class="horizontal">
+                    <li><a href="destinies.html">Destinos<span class="ocultarInfoEnlace">Redireccion a página de destinos</span></a></li>
+                    <li><a href="#about">Sobre nosotros<span class="ocultarInfoEnlace">Redireccion a página con información sobre Interstellar Travels</span></a></li>
+                    <li><a href="#contact">Contacto<span class="ocultarInfoEnlace">Redireccion a página de contacto con Interstellar Travels</span></a></li>
+                </ul>
+            </div>  

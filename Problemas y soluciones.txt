@@ -1,0 +1,2 @@
+Problema: error por aria hidden elements do not contain focus elements
+Solucion: añadir la linea " aria-hidden="false" aria-modal="true" a los hijos, para resetear aria-hidden y añadir aria-modal para notificar a los lectores de pantalla

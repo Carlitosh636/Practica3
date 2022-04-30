@@ -1,0 +1,42 @@
+.header{
+  width: 95%;
+  background-color: blue;
+}
+.navMenu{
+  width: 10%;
+  float: left;
+  background-color: rgb(238, 122, 87);
+}
+.content {
+  padding: 16px;
+  width: 90%;
+  float:right
+}
+.footer{
+  clear: both;
+  width: 100%;
+  background-color: grey;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 95%
+  }
+.sticky + .content {
+    padding-top: 150px;
+  }
+
+.title{
+    font-size: xx-large;
+    margin-left: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.ocultarInfoEnlace{
+  position: absolute;
+  left:-9000px;
+}
