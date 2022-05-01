@@ -21,11 +21,43 @@
                          
         </div>
         <div class="content">
-            <p>Aquí estará la lista con imagenes de destinos, y debajo una tabla con las tarifas. Dependen de la lejania y la cantidad de personas</p>
             <div class="buttonGroup">
-                <button type="button" id="showMars" aria-label="Enseñar el destino Marte" class="destinyMars"></button>
-                <button type="button" id="showVenus" aria-label="Enseñar el destino Venus" class="destinyVenus"></button>
+                <button type="button" onclick="activateModal('Gran barrera de coral')" aria-label="Enseñar el destino Gran Barrera de coral" class="destinyCoral"></button>
+                <button type="button" onclick="activateModal('Hundimiento del Titanic')" aria-label="Enseñar el destino Titanic" class="destinyTitanic"></button>
                 <button type="button" id="showSaturn" aria-label="Enseñar el destino Saturno" class="destinySaturn"></button>
+            </div>
+            <table class="tablaPrecios">
+                <caption>Tabla de precios por persona</caption>
+                <tr>
+                    <td></td>
+                    <th id="Adult">Adulto(18-65)</th>
+                    <th id="Minor">Menor(8-17)</th>
+                    <th id="Old">Jubilado(65+)</th>                   
+                </tr>
+                <tr>
+                    <th id="Close">
+                        Planetas cercanos
+                    </th>
+                    <td id="Close Adult">120 EUR</td>
+                    <td id="Close Minor">80 EUR</td>
+                    <td id="Close Old">90 EUR</td>
+                </tr>
+                <tr>
+                    <th id="Far">
+                        Planetas lejanos
+                    </th>
+                    <td id="Far Adult">240 EUR</td>
+                    <td id="Far Minor">160 EUR</td>
+                    <td id="Far Old">180 EUR</td>
+                </tr>
+            </table>
+            <div role="dialog" id=""></div>
+            <div id="modal" class="modal" aria-modal="true" aria-labelledby="modal_label">
+                <div class="modal-content">
+                    <p id="modalText">text example</p>
+                    <img id="modalImg" src="https://www.robotitus.com/wp-content/uploads/2020/10/Coral.jpg">
+                    <span class="close">X</span>
+                </div>
             </div>
         </div>
         <div class="navMenu">
@@ -35,5 +67,6 @@
             <p>Links aquí</p>
         </div>
         <script src="../js/scripts.js"></script>
+        <script src="../js/dialog.js"></script>
     </body>
 </html>
