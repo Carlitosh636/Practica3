@@ -5,3 +5,4 @@ Creador: James Gilmour / Australian Institute of Marine Science
 Imagen propiedad de: James Gilmour
 Copyright: Australian Institute of Marine Science
 
+Para el dialog: https://allyjs.io/getting-started.html

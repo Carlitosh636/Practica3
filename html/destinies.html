@@ -20,11 +20,31 @@
             <p class="title">Interstellar Travels</p>
                          
         </div>
+        <div class="navMenu" id="myNavMenu">
+            <p>Suspendisse tempus lectus orci, ac efficitur sapien rutrum id. Curabitur tortor ipsum, faucibus eu venenatis ac, lacinia sit amet mauris. Duis eget efficitur orci. Aenean rhoncus lectus eget odio posuere bibendum. Nunc ut suscipit nisi, a vehicula purus. Nunc ut varius purus. In et ultricies ipsum. Pellentesque tincidunt eu leo eu aliquet. In hac habitasse platea dictumst. Nullam facilisis porttitor libero, tincidunt rhoncus leo dictum ac. Donec ut augue mi. Donec tristique quis nibh eget porttitor.</p>
+        </div>
         <div class="content">
+            
+            <h1>Deleitese con nuestros posibles destinos</h1>
+            <h2>¿Dónde quieres viajar?</h2>
+            <p>Pulsa sobre la imagen del destino que más te interese a continuación para aprender más sobre ese lugar</p>
             <div class="buttonGroup">
-                <button type="button" onclick="activateModal('Gran barrera de coral')" aria-label="Enseñar el destino Gran Barrera de coral" class="destinyCoral"></button>
-                <button type="button" onclick="activateModal('Hundimiento del Titanic')" aria-label="Enseñar el destino Titanic" class="destinyTitanic"></button>
-                <button type="button" id="showSaturn" aria-label="Enseñar el destino Saturno" class="destinySaturn"></button>
+                <button type="button" onclick="activateModal(
+                    'Gran barrera de coral',
+                    'https://www.robotitus.com/wp-content/uploads/2020/10/Coral.jpg',
+                    'Descripcion barrera de coral'
+                    )" 
+                    aria-label="Enseñar el destino Gran Barrera de coral" class="destinyCoral"></button>
+                <button type="button" onclick="activateModal(
+                    'Hundimiento del Titanic',
+                    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Titanic_wreck_bow.jpg/1200px-Titanic_wreck_bow.jpg',
+                    'Descripcion titanic'
+                    )" aria-label="Enseñar el destino Titanic" class="destinyTitanic"></button>
+                <button type="button" onclick="activateModal(
+                    'Trecho de las Marianas',
+                    'https://upload.wikimedia.org/wikipedia/commons/f/f7/Mariana-trench.jpg',
+                    'Descripcion marianas'
+                    )"aria-label="Enseñar el destino estrecho de las marianas" class="destinyMarianas"></button>
             </div>
             <table class="tablaPrecios">
                 <caption>Tabla de precios por persona</caption>
@@ -36,7 +56,7 @@
                 </tr>
                 <tr>
                     <th id="Close">
-                        Planetas cercanos
+                        Destinos de 0 a 500 metros de profundidad
                     </th>
                     <td id="Close Adult">120 EUR</td>
                     <td id="Close Minor">80 EUR</td>
@@ -44,7 +64,7 @@
                 </tr>
                 <tr>
                     <th id="Far">
-                        Planetas lejanos
+                        Destinos de 500+ metros de profundidad
                     </th>
                     <td id="Far Adult">240 EUR</td>
                     <td id="Far Minor">160 EUR</td>
@@ -52,21 +72,21 @@
                 </tr>
             </table>
             <div role="dialog" id=""></div>
-            <div id="modal" class="modal" aria-modal="true" aria-labelledby="modal_label">
-                <div class="modal-content">
-                    <p id="modalText">text example</p>
-                    <img id="modalImg" src="https://www.robotitus.com/wp-content/uploads/2020/10/Coral.jpg">
-                    <span class="close">X</span>
+            <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="dialog-title" aria-describedby="dialog-desc" tabindex="-1">
+                <div class="modal-content" aria>
+                    <button type="button" class="close" aria-label="close-modal">X</button>
+                    <h1 id="dialog-title">text example</h1>
+                    <img id="dialog-img" alt="">
+                    <p id="dialog-desc">Lorem ipsum</p>                   
                 </div>
             </div>
         </div>
-        <div class="navMenu">
-            <p>Botones navegación aquí</p>
-        </div>
+       
         <div class="footer">
             <p>Links aquí</p>
         </div>
         <script src="../js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/ally.js/1.4.1/ally.min.js"></script>
         <script src="../js/dialog.js"></script>
     </body>
 </html>

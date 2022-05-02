@@ -10,6 +10,7 @@ body{
   width: 10%;
   float: left;
   background-color: rgb(238, 122, 87);
+  padding: 5px;
 }
 .content {
   padding: 16px;
@@ -46,7 +47,7 @@ body{
 }
 
 .tablaPrecios{
-  clear:both;
+  clear:left;
   float:left;
   border: 1px solid #bccbd3;
   border-collapse: collapse;
@@ -68,18 +69,16 @@ body{
   padding:6px
 }
 .tablaPrecios td{
-  background-color: rgb(255, 255, 255);
-  color:rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+  color:rgb(255, 255, 255);
   font-family: Arial, Helvetica, sans-serif;
   font-size: medium;
   border: 1px solid #497a6a;
   padding:6px
 }
 .buttonGroup{
-  clear:both;
   background-color: #383838;
   border: 1px solid rgb(97, 97, 97);
-  padding: 5px 5px;
   float: left;
 }
 
@@ -105,11 +104,10 @@ body{
   background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Titanic_wreck_bow.jpg/1200px-Titanic_wreck_bow.jpg);
   background-size: 300px 250px;
 }
-.destinySaturn{
-  background: url(https://upload.wikimedia.org/wikipedia/commons/2/28/Saturn_01.svg);
+.destinyMarianas{
+  background: url(https://upload.wikimedia.org/wikipedia/commons/f/f7/Mariana-trench.jpg);
   background-size: 300px 250px;
 }
-
 .modal {
   display: none; 
   position: fixed; 
@@ -124,16 +122,26 @@ body{
 
 .modal-content {
   background-color: #8cfad0;
-  margin: 15%;
-  padding: 20px;
-  border: 1px solid #888;
+  margin: 10%;
+  padding: 30px;
+  border: 2px solid rgb(4, 0, 61);
   width: 80%;
+}
+.modal h1{
+  color:black;
+  font-family: 'Times New Roman', Times, serif;
+  
 }
 .modal p{
   color:black;
   font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
   
+}
+.modal img{
+  width: 450px;
+  height: 300px;
+  border: 2px solid rgb(4, 0, 61);
 }
 .close {
   color: rgb(255, 0, 0);
