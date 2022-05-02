@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Pagina de viajes" />
+        <meta name="author" content="Carlos Javier Hervás Ledesma" />
+        <title>Deep Sea Travels</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Fuentes-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+        <link href="../css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="header" id="myHeader">
+            <p class="title">Deep Sea Travels</p>
+            <nav class="navMenu" title="Menu de navegacion horizontal">
+                <ul class="no-style horizontal" id="navMenuList">
+                    <li><a href="homepage.html" aria-labelledby="navMenuList ini" id="ini">Inicio</a></li>
+                    <li><a href="destinies.html" aria-labelledby="navMenuList dest" id="dest">Destinos y precios</a></li>
+                    <li><a href="postcard.html" aria-labelledby="navMenuList card" id="card">Mandar postal</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <h1>
+                Envía una postal desde tu destino favorito!
+            </h1>
+            <h2>
+                Háblale a un amigo o familiar de las maravillas que has encontrado bajo el mar con este sencillo sistema de envío de postales.
+            </h2>
+            <div class="postForm">
+                <form action="">
+                    <p id="prevTip">
+                       A la derecha del formulario tienes una previsualización de la postal antes de enviarla, actualizada en tiempo real:
+                    </p>
+                    <label for="destino">Seleccione el destino desde el que enviar postal (obligatorio):</label>
+                    <select id="destino" name="destino" aria-required="true">
+                        <optgroup label="Destinos poco profundos (0-500 metros)">
+                            <option value="1">Barrera de coral</option>
+                            <option value="2">Titanic</option>
+                        </optgroup>
+                        <optgroup label="Destinos profundos (500+ metros)">
+                            <option value="3">Trecho de las Marianas</option>
+                        </optgroup>
+                    </select>
+                    <label for="texto">Escriba el texto de la postal:</label>
+                    <textarea id="texto" name="texto" rows="20" cols="50" onkeyup="liveText(this.value)"></textarea>
+                    <label for="destinatario">Escriba el nombre del destinatario (obligatorio):</label>
+                    <input type="text" name="destinatario" id="destinatario" aria-required="true" onkeyup="liveDest(this.value)">
+                    <label for="direccion" aria-describedby="ejemplo">Escriba la dirección (obligatorio) (formato: C/XXXX NºY Código Postal, Provincia):</label>
+                    <input type="text" name="direccion" id="direccion" aria-required="true" onkeyup="liveMeta(this.value)">
+                    <p id="ejemplo">Por ejemplo: C/San Juan Nº3 28001, Madrid</p>
+                    <input type="submit" name="enviar" value="Enviar">
+                </form>
+                <div class="prev" id="prev" aria-describedby="prevTip">
+                    <p class="prevText" id="prevDate">Fecha actual</p>
+                    <p class="prevText" id="prevText"></p>
+                    
+                    <p class="prevMeta" id="prevMeta">info meta</p>
+                    <p class="prevMeta" id="prevDestin">Persona</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="footer">
+            <p>Links aquí</p>
+        </div>
+        <script src="../js/scripts.js"></script>
+        <script src="../js/postcardJS.js"></script>
+    </body>
+</html>

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Pagina de viajes" />
         <meta name="author" content="Carlos Javier Hervás Ledesma" />
-        <title>Interstellar Travels</title>
+        <title>Deep Sea Travels</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Fuentes-->
@@ -17,11 +17,14 @@
     </head>
     <body>
         <div class="header" id="myHeader">
-            <p class="title">Interstellar Travels</p>
-                         
-        </div>
-        <div class="navMenu" id="myNavMenu">
-            <p>Suspendisse tempus lectus orci, ac efficitur sapien rutrum id. Curabitur tortor ipsum, faucibus eu venenatis ac, lacinia sit amet mauris. Duis eget efficitur orci. Aenean rhoncus lectus eget odio posuere bibendum. Nunc ut suscipit nisi, a vehicula purus. Nunc ut varius purus. In et ultricies ipsum. Pellentesque tincidunt eu leo eu aliquet. In hac habitasse platea dictumst. Nullam facilisis porttitor libero, tincidunt rhoncus leo dictum ac. Donec ut augue mi. Donec tristique quis nibh eget porttitor.</p>
+            <p class="title">Deep Sea Travels</p>
+            <nav class="navMenu" title="Menu de navegacion horizontal">
+                <ul class="no-style horizontal" id="navMenuList">
+                    <li><a href="homepage.html" aria-labelledby="navMenuList ini" id="ini">Inicio</a></li>
+                    <li><a href="destinies.html" aria-labelledby="navMenuList dest" id="dest">Destinos y precios</a></li>
+                    <li><a href="postcard.html" aria-labelledby="navMenuList card" id="card">Mandar postal</a></li>
+                </ul>
+            </nav>
         </div>
         <div class="content">
             
@@ -46,35 +49,52 @@
                     'Descripcion marianas'
                     )"aria-label="Enseñar el destino estrecho de las marianas" class="destinyMarianas"></button>
             </div>
+            <div class="buttonGroup">
+                <button type="button" onclick="activateModal(
+                    'Gran barrera de coral',
+                    'https://www.robotitus.com/wp-content/uploads/2020/10/Coral.jpg',
+                    'Descripcion barrera de coral'
+                    )" 
+                    aria-label="Enseñar el destino Gran Barrera de coral" class="destinyCoral"></button>
+                <button type="button" onclick="activateModal(
+                    'Hundimiento del Titanic',
+                    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Titanic_wreck_bow.jpg/1200px-Titanic_wreck_bow.jpg',
+                    'Descripcion titanic'
+                    )" aria-label="Enseñar el destino Titanic" class="destinyTitanic"></button>
+                <button type="button" onclick="activateModal(
+                    'Trecho de las Marianas',
+                    'https://upload.wikimedia.org/wikipedia/commons/f/f7/Mariana-trench.jpg',
+                    'Descripcion marianas'
+                    )"aria-label="Enseñar el destino estrecho de las marianas" class="destinyMarianas"></button>
+            </div>
             <table class="tablaPrecios">
                 <caption>Tabla de precios por persona</caption>
                 <tr>
                     <td></td>
-                    <th id="Adult">Adulto(18-65)</th>
-                    <th id="Minor">Menor(8-17)</th>
-                    <th id="Old">Jubilado(65+)</th>                   
+                    <th id="Adulto">Adulto(18-65)</th>
+                    <th id="Menor">Menor(8-17)</th>
+                    <th id="Jubilado">Jubilado(65+)</th>                   
                 </tr>
                 <tr>
-                    <th id="Close">
+                    <th id="Cerca">
                         Destinos de 0 a 500 metros de profundidad
                     </th>
-                    <td id="Close Adult">120 EUR</td>
-                    <td id="Close Minor">80 EUR</td>
-                    <td id="Close Old">90 EUR</td>
+                    <td id="Cerca Adulto">120 EUR</td>
+                    <td id="Cerca Menor">80 EUR</td>
+                    <td id="Cerca Jubilado">90 EUR</td>
                 </tr>
                 <tr>
-                    <th id="Far">
+                    <th id="Profundo">
                         Destinos de 500+ metros de profundidad
                     </th>
-                    <td id="Far Adult">240 EUR</td>
-                    <td id="Far Minor">160 EUR</td>
-                    <td id="Far Old">180 EUR</td>
+                    <td id="Profundo Adulto">240 EUR</td>
+                    <td id="Profundo Menor">160 EUR</td>
+                    <td id="Profundo Jubilado">180 EUR</td>
                 </tr>
             </table>
-            <div role="dialog" id=""></div>
             <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="dialog-title" aria-describedby="dialog-desc" tabindex="-1">
                 <div class="modal-content" aria>
-                    <button type="button" class="close" aria-label="close-modal">X</button>
+                    <button type="button" class="close" aria-label="Cerrar vista expandida">X</button>
                     <h1 id="dialog-title">text example</h1>
                     <img id="dialog-img" alt="">
                     <p id="dialog-desc">Lorem ipsum</p>                   

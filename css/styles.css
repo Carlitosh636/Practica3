@@ -2,15 +2,41 @@ body{
   background-color: rgb(11, 42, 48);
   color:white
 }
+
 .header{
   width: 95%;
-  background-color: rgb(0, 26, 255);
+  background-color: rgb(0, 13, 126);
+  border: 1px inset #497a6a;
 }
 .navMenu{
-  width: 10%;
+  width: 95%;
+  background-color: rgb(0, 29, 20);
+}
+
+.no-style{
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+}
+.horizontal li{
+  float:left;
+  margin:0;
+  padding: 0;
+}
+.horizontal a{
   float: left;
-  background-color: rgb(238, 122, 87);
-  padding: 5px;
+  text-decoration: none;
+  margin:0;
+  color:white;
+  background-color: rgb(0, 122, 84);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:17px;
+  padding: 10px;
+
+}
+.horizontal a:hover,.horizontal a:focus{
+  background-color: rgb(0, 82, 56);
 }
 .content {
   padding: 16px;
@@ -32,12 +58,10 @@ body{
   }
 
 .title{
-    font-size: xx-large;
+    font-size: 50px;
     margin-left: 15px;
     font-family: Arial, Helvetica, sans-serif;
-    padding-left: 5%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding:10px;
     color: white;
 }
 
@@ -77,6 +101,7 @@ body{
   padding:6px
 }
 .buttonGroup{
+  clear:both;
   background-color: #383838;
   border: 1px solid rgb(97, 97, 97);
   float: left;
@@ -155,4 +180,38 @@ body{
   color: rgb(131, 0, 0);
   text-decoration: none;
   cursor: pointer;
+}
+
+label,select,textarea,input{
+  clear:left;
+  float:left
+}
+form p{
+  clear:left;
+  float:left
+}
+.postForm{
+  display: flex;
+}
+.prev{
+  border: 4px solid rgb(4, 0, 61);
+  margin:5%;
+  background-color: white;
+  width: 600px;
+  height: 400px;
+}
+.prevText{
+  clear: both;
+  margin:5px;
+  float:left;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+.prevMeta{
+  margin:5px;
+  float:right;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
 }
