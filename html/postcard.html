@@ -34,12 +34,12 @@
                 Háblale a un amigo o familiar de las maravillas que has encontrado bajo el mar con este sencillo sistema de envío de postales.
             </h2>
             <div class="postForm">
-                <form action="">
-                    <p id="prevTip">
-                       A la derecha del formulario tienes una previsualización de la postal antes de enviarla, actualizada en tiempo real:
+                <form name="postForm" id="postForm" action="confirmation.html">
+                    <p>
+                        Para previsualizar el estado de la postal antes de enviarla, pulsa el botón "Previsualizar postal":
                     </p>
-                    <label for="destino">Seleccione el destino desde el que enviar postal (obligatorio):</label>
-                    <select id="destino" name="destino" aria-required="true">
+                    <label for="destino">Seleccione el destino desde el que enviar postal:</label>
+                    <select id="destino" name="destino">
                         <optgroup label="Destinos poco profundos (0-500 metros)">
                             <option value="1">Barrera de coral</option>
                             <option value="2">Titanic</option>
@@ -49,28 +49,35 @@
                         </optgroup>
                     </select>
                     <label for="texto">Escriba el texto de la postal:</label>
-                    <textarea id="texto" name="texto" rows="20" cols="50" onkeyup="liveText(this.value)"></textarea>
+                    <textarea id="texto" name="texto" rows="20" cols="50"></textarea>
                     <label for="destinatario">Escriba el nombre del destinatario (obligatorio):</label>
-                    <input type="text" name="destinatario" id="destinatario" aria-required="true" onkeyup="liveDest(this.value)">
+                    <input type="text" name="destinatario" id="destinatario" aria-required="true">
                     <label for="direccion" aria-describedby="ejemplo">Escriba la dirección (obligatorio) (formato: C/XXXX NºY Código Postal, Provincia):</label>
-                    <input type="text" name="direccion" id="direccion" aria-required="true" onkeyup="liveMeta(this.value)">
+                    <input type="text" name="direccion" id="direccion" aria-required="true">
                     <p id="ejemplo">Por ejemplo: C/San Juan Nº3 28001, Madrid</p>
+                    <input type="button" name="prevButton" id="prevButton" value="Previsualizar postal" onclick="activatePrev()">
                     <input type="submit" name="enviar" value="Enviar">
+                    <p class="formErrors" id="errors" role="alert" aria-atomic="true"></p>
                 </form>
-                <div class="prev" id="prev" aria-describedby="prevTip">
+                <div class="prev" id="prev" aria-describedby="prevTip" aria-hidden="true">
+                    <title id="prevTip">Previsualización de postal</title>
                     <p class="prevText" id="prevDate">Fecha actual</p>
-                    <p class="prevText" id="prevText"></p>
-                    
-                    <p class="prevMeta" id="prevMeta">info meta</p>
+                    <p class="prevText" id="prevText">Texto de la postal</p>                  
+                    <p class="prevMeta" id="prevMeta">C/XXXX NºY Código Postal, Provincia</p>
                     <p class="prevMeta" id="prevDestin">Persona</p>
                 </div>
+                
+                
+                    
             </div>
             
         </div>
         <div class="footer">
             <p>Links aquí</p>
         </div>
+        <script src="http://code.jquery.com/jquery.js"></script>
         <script src="../js/scripts.js"></script>
         <script src="../js/postcardJS.js"></script>
+        <script src="../js/checkErrors.js"></script>
     </body>
 </html>
