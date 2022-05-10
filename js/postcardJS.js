@@ -4,7 +4,8 @@ var desti = document.getElementById("prevDestin")
 var texto = document.getElementById("prevText")
 var metaText = document.getElementById("prevMeta")
 var prevButton = document.getElementById("prevButton")
-
+var destino = document.getElementById("destino")
+var prevImg = document.getElementById("prevImg")
 var textoSet = document.getElementById("texto")
 var destiSet = document.getElementById("destinatario")
 var metaSet = document.getElementById("direccion")
@@ -33,12 +34,16 @@ function setMeta(meta){
     }
     metaText.innerHTML=meta
 }
+function setImg(img){
+    prevImg.src=img
+}
 function activatePrev(){
     prev.style.display='block'
     prev.setAttribute('aria-hidden','false')
     setText(textoSet.value)
     setDest(destiSet.value)
     setMeta(metaSet.value)
+    setImg(destino.value)
 }
 window.addEventListener('load',getDate());
 

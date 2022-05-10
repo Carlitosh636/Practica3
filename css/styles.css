@@ -5,10 +5,12 @@ body{
 
 .header{
   width: 95%;
+  height: 100px;
   background-color: rgb(0, 13, 126);
   border: 1px inset #497a6a;
 }
 .navMenu{
+  margin-left:20px;
   width: 95%;
   background-color: rgb(0, 29, 20);
 }
@@ -39,7 +41,7 @@ body{
   background-color: rgb(0, 82, 56);
 }
 .content {
-  padding: 16px;
+  padding: 6px;
   width: 90%;
   float:right
 }
@@ -58,10 +60,10 @@ body{
   }
 
 .title{
-    font-size: 50px;
+    font-size: 35px;
     margin-left: 15px;
     font-family: Arial, Helvetica, sans-serif;
-    padding:10px;
+    padding:5px;
     color: white;
 }
 
@@ -220,6 +222,9 @@ form p{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
 }
+.prevImg{
+  
+}
 .formErrors{
   border:2px solid rgb(119, 0, 0);
   background-color: rgb(255, 255, 169);
@@ -230,7 +235,7 @@ form p{
   color:black;
   border:4px solid rgb(4, 0, 61);
   padding:10px;
-  left: 50;
+  left: 50%;
   right: 50%;
   width: 300px;
   height:100px
@@ -248,4 +253,7 @@ form p{
 }
 .confirmationBox a:hover,.horizontal a:focus{
   background-color: rgb(0, 82, 56);
+}
+.disclaimer{
+  display: none;
 }
