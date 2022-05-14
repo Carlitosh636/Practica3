@@ -10,8 +10,8 @@ body{
   border: 1px inset #497a6a;
 }
 .navMenu{
-  margin-left:20px;
-  width: 95%;
+  margin-right:20px;
+  float:right;
   background-color: rgb(0, 29, 20);
 }
 
@@ -24,6 +24,9 @@ body{
   float:left;
   margin:0;
   padding: 0;
+}
+.horizontal .current{
+  background-color: rgb(0, 82, 56);
 }
 .horizontal a{
   float: left;
@@ -38,7 +41,7 @@ body{
 
 }
 .horizontal a:hover,.horizontal a:focus{
-  background-color: rgb(0, 82, 56);
+  background-color: rgb(1, 71, 49);
 }
 .content {
   padding: 6px;
@@ -149,10 +152,11 @@ body{
 
 .modal-content {
   background-color: #8cfad0;
-  margin: 10%;
+  margin: 5%;
   padding: 30px;
   border: 2px solid rgb(4, 0, 61);
   width: 80%;
+  overflow: auto;
 }
 .modal h1{
   color:black;
@@ -163,9 +167,10 @@ body{
   color:black;
   font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
-  
+  padding:3px;
 }
 .modal img{
+  float:left;
   width: 450px;
   height: 300px;
   border: 2px solid rgb(4, 0, 61);
@@ -223,7 +228,8 @@ form p{
   font-size: 15px;
 }
 .prevImg{
-  
+  width:500px;
+  height:200px
 }
 .formErrors{
   border:2px solid rgb(119, 0, 0);
@@ -256,4 +262,19 @@ form p{
 }
 .disclaimer{
   display: none;
+}
+.upButton{
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 16px; /* Increase font size */
 }

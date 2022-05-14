@@ -26,6 +26,7 @@ function activateModal(text,imgUrl,desc) {
   hiddenHandle = ally.maintain.hidden({
     filter: modal,
   });
+  disableScroll();
   element.focus();
 }
 function deactivateModal(){
@@ -33,6 +34,7 @@ function deactivateModal(){
   tabHandle.disengage();
   hiddenHandle.disengage();
   lastFocus.focus();
+  enableScroll();
   modal.style.display="none"
 }
 
@@ -50,3 +52,16 @@ document.addEventListener('keydown',function(event){
     deactivateModal()
   }
 })
+
+function disableScroll() {
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+
+      window.onscroll = function() {
+          window.scrollTo(scrollLeft, scrollTop);
+      };
+}
+
+function enableScroll() {
+  window.onscroll = function() {};
+}
