@@ -3,15 +3,18 @@ var modal = document.getElementById("modal");
 var modalText = document.getElementById("dialog-title")
 var modalDesc = document.getElementById("dialog-desc")
 var modalImg = document.getElementById("dialog-img")
+var modalLink = document.getElementById("dialog-link")
 var disableHandle,tabHandle,lastFocus,hiddenHandle;
 var span = document.getElementsByClassName("close")[0];
 
 
-function activateModal(text,imgUrl,desc) {
+function activateModal(text,imgUrl,desc,link,linkText) {
   modal.style.display = "block";
   modalText.innerHTML=text;
   modalImg.src=imgUrl;
   modalDesc.innerText=desc;
+  modalLink.href = link;
+  modalLink.innerHTML = linkText
   lastFocus = document.activeElement;
   disableHandle = ally.maintain.disabled({
     filter:modal,

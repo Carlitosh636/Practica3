@@ -33,39 +33,27 @@
             <p>Pulsa sobre la imagen del destino que más te interese a continuación para aprender más sobre ese lugar</p>
             <div class="buttonGroup">
                 <button type="button" onclick="activateModal(
-                    'Gran barrera de coral',
+                    'Gran barrera de Coral',
                     'https://www.robotitus.com/wp-content/uploads/2020/10/Coral.jpg',
-                    'Descripcion barrera de coral'
+                    'Al nordeste de Australia, esta bellísima pieza natural hará la maravilla de tus ojos. Contiene cientos de especies que conviven en este ecosistema, que también ha atraído el interés de científicos.',
+                    'https://es.wikipedia.org/wiki/Gran_Barrera_de_Coral',
+                    'Leer más sobre la Gran Barrera de Coral'
                     )" 
                     aria-label="Enseñar el destino Gran Barrera de coral" class="destinyCoral"></button>
                 <button type="button" onclick="activateModal(
                     'Hundimiento del Titanic',
                     'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Titanic_wreck_bow.jpg/1200px-Titanic_wreck_bow.jpg',
-                    'El RMS Titanic fue un transatlántico británico, el mayor barco de pasajeros del mundo. Ahora puedes visitar la caída de este titán y observar mediante visitas guiadas el interior de la nave ya erosionada. Pincha aquí para más información del Titanic'
+                    'El RMS Titanic fue un transatlántico británico, el mayor barco de pasajeros del mundo. Ahora puedes visitar la caída de este titán y observar mediante visitas guiadas el interior de la nave ya erosionada.',
+                    'https://es.wikipedia.org/wiki/Pecio_del_RMS_Titanic',
+                    'Leer más sobre el hundimiento del Titanic'
                     )" aria-label="Enseñar el destino Titanic" class="destinyTitanic"></button>
                 <button type="button" onclick="activateModal(
-                    'Trecho de las Marianas',
+                    'Fosa de las Marianas',
                     'https://upload.wikimedia.org/wikipedia/commons/f/f7/Mariana-trench.jpg',
-                    'Descripcion marianas'
-                    )"aria-label="Enseñar el destino estrecho de las marianas" class="destinyMarianas"></button>
-            </div>
-            <div class="buttonGroup">
-                <button type="button" onclick="activateModal(
-                    'Gran barrera de coral',
-                    'https://www.robotitus.com/wp-content/uploads/2020/10/Coral.jpg',
-                    'Descripcion barrera de coral'
-                    )" 
-                    aria-label="Enseñar el destino Gran Barrera de coral" class="destinyCoral"></button>
-                <button type="button" onclick="activateModal(
-                    'Hundimiento del Titanic',
-                    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Titanic_wreck_bow.jpg/1200px-Titanic_wreck_bow.jpg',
-                    'Descripcion titanic'
-                    )" aria-label="Enseñar el destino Titanic" class="destinyTitanic"></button>
-                <button type="button" onclick="activateModal(
-                    'Trecho de las Marianas',
-                    'https://upload.wikimedia.org/wikipedia/commons/f/f7/Mariana-trench.jpg',
-                    'Descripcion marianas'
-                    )"aria-label="Enseñar el destino estrecho de las marianas" class="destinyMarianas"></button>
+                    'Un lugar solo para los más intrépidos, la fosa de las marianas es considerada el área más profunda de los océanos. Por ello en este viaje se usarán submarinos especializados para profundizar en sus secretos. Aunque escasa, la vida que existe aquí se ha adaptado a tales condiciones, creciendo desmesuradamente. Pero nada que nuestra tecnología no pueda evitar.',
+                    'https://es.wikipedia.org/wiki/Fosa_de_las_Marianas',
+                    'Leer más sobre la fosa de las marianas'
+                    )"aria-label="Enseñar el destino fosa de las marianas" class="destinyMarianas"></button>
             </div>
             <table class="tablaPrecios">
                 <caption>Tabla de precios por persona</caption>
@@ -96,6 +84,7 @@
                 <div class="modal-content" aria>
                     <button type="button" class="close" aria-label="Cerrar vista expandida">X</button>
                     <h1 id="dialog-title">text example</h1>
+                    <a id="dialog-link" title="Link para leer más" target=”_blank”></a>
                     <img id="dialog-img" alt="">
                     <p id="dialog-desc">Lorem ipsum</p>                   
                 </div>
