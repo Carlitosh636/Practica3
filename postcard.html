@@ -53,9 +53,9 @@
                     <label for="destinatario">Escriba el nombre del destinatario (obligatorio):</label>
                     <input type="text" name="destinatario" id="destinatario" aria-required="true">
                     <label for="direccion" aria-describedby="ejemplo">Escriba la dirección (obligatorio) (formato: C/XXXX NºY Código Postal, Provincia):</label>
-                    <input type="text" name="direccion" id="direccion" aria-required="true">
+                    <input type="text" name="direccion" id="direccion" aria-required="true" autocomplete="given-name">
                     <p id="ejemplo">Por ejemplo: C/San Juan Nº3 28001, Madrid</p>
-                    <input type="button" name="prevButton" id="prevButton" value="Previsualizar postal" onclick="activatePrev()">
+                    <input type="button" name="prevButton" id="prevButton" value="Previsualizar postal" onclick="activatePrev()" autocomplete="given-name">
                     <input type="submit" name="enviar" value="Enviar">
                     <p class="formErrors" id="errors" role="alert" aria-atomic="true"></p>
                 </form>
