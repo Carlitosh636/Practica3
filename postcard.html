@@ -51,9 +51,9 @@
                     <label for="texto">Escriba el texto de la postal:</label>
                     <textarea id="texto" name="texto" rows="20" cols="50"></textarea>
                     <label for="destinatario">Escriba el nombre del destinatario (obligatorio):</label>
-                    <input type="text" name="destinatario" id="destinatario" aria-required="true">
+                    <input type="text" name="destinatario" id="destinatario" aria-required="true" autocomplete="given-name">
                     <label for="direccion" aria-describedby="ejemplo">Escriba la dirección (obligatorio) (formato: C/XXXX NºY Código Postal, Provincia):</label>
-                    <input type="text" name="direccion" id="direccion" aria-required="true">
+                    <input type="text" name="direccion" id="direccion" aria-required="true" autocomplete="given-name">
                     <p id="ejemplo">Por ejemplo: C/San Juan Nº3 28001, Madrid</p>
                     <input type="button" name="prevButton" id="prevButton" value="Previsualizar postal" onclick="activatePrev()">
                     <input type="submit" name="enviar" value="Enviar">
@@ -84,7 +84,7 @@
             </p>
             
         </div>
-        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script src="js/scripts.js"></script>
         <script src="js/postcardJS.js"></script>
         <script src="js/checkErrors.js"></script>
